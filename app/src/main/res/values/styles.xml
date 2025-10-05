@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Control" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- 圆角按钮样式，使用自定义背景 -->
+    <style name="BaseButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="ButtonGreen" parent="BaseButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_button_green</item>
+    </style>
+    <style name="ButtonRed" parent="BaseButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_button_red</item>
+    </style>
+    <style name="ButtonBlue" parent="BaseButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_button_blue</item>
+    </style>
+    <style name="ButtonYellow" parent="BaseButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_button_yellow</item>
+    </style>
+</resources>

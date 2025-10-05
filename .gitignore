@@ -1,0 +1,62 @@
+# Android/Gradle .gitignore
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+e.g.
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+app/build/
+
+# Local configuration
+local.properties
+
+# NDK/External build
+.externalNativeBuild/
+.cxx/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Android captures
+captures/
+
+# Keystore files (keep safe; track only if intended)
+*.jks
+*.keystore
+
+# APK/AAB outputs
+*.apk
+*.ap_ 
+*.aab
+
+# Generated files
+*.dex
+*.class
+
+# Crashlytics/Fabric
+com_crashlytics/**
+fabric/**
+
+# IntelliJ
+out/
+
+# Kotlin/Java caches
+.kotlin/
+
+# Misc
+*.orig
+*.rej
+
+# Note: keep Gradle wrapper tracked
+# Do NOT ignore gradle/wrapper and gradlew files

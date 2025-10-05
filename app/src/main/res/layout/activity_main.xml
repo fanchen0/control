@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- 顶部信息 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:text="绑定手机号：18888888888" />
+
+            <TextView
+                android:id="@+id/tv_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:text="绑定卡号：202510010756431939001" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:text="到期时间：2025-10-31 08:04:47" />
+        </LinearLayout>
+
+        <!-- 显示位置（两行） -->
+        <LinearLayout
+            android:id="@+id/ll_status_display"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_status_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:text="18302498298 状态： 正常"
+                android:gravity="center_horizontal"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tv_status_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:text="号码为雷号"
+                android:gravity="center_horizontal"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <!-- 占位将按钮整体推到底部 -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- WiFi 操作按钮行（显示/隐藏/连接） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_wifi_show"
+                style="@style/ButtonBlue"
+                android:layout_weight="1"
+                android:text="显示WIFI" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_wifi_hide"
+                style="@style/ButtonBlue"
+                android:layout_weight="1"
+                android:text="隐藏WIFI" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_wifi_connect"
+                style="@style/ButtonBlue"
+                android:layout_weight="1"
+                android:text="连接WIFI" />
+        </LinearLayout>
+
+        <!-- 第一排：已连接/断开 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_connected"
+                style="@style/ButtonGreen"
+                android:layout_weight="1"
+                android:text="已连接" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_disconnect"
+                style="@style/ButtonRed"
+                android:layout_weight="1"
+                android:text="断开" />
+        </LinearLayout>
+
+        <!-- 第二排：假打开启 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_fake_auto"
+                style="@style/ButtonYellow"
+                android:layout_weight="1"
+                android:text="插卡假打"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_fake_on"
+                style="@style/ButtonYellow"
+                android:layout_weight="1"
+                android:text="全局假打"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- 蓝色功能按钮栅格 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 每行三个蓝色按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="8dp">
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_connect" android:layout_weight="1" android:text="接通" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_hangup" android:layout_weight="1" android:text="挂断" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_reject" android:layout_weight="1" android:text="拒接" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="8dp">
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_dead_move" android:layout_weight="1" android:text="死卡移动" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_dead_union" android:layout_weight="1" android:text="死卡联通" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_dead_signal" android:layout_weight="1" android:text="死卡电信" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="8dp">
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_empty" android:layout_weight="1" android:text="空号" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_unreachable" android:layout_weight="1" android:text="无法接通" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_pause_service" android:layout_weight="1" android:text="暂停服务" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:paddingBottom="8dp">
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_shutdown" android:layout_weight="1" android:text="停机" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_poweroff" android:layout_weight="1" android:text="关机" />
+                <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+                <Button style="@style/ButtonBlue" android:id="@+id/btn_not_exist" android:layout_weight="1" android:text="不存在" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 输入号码 + 上报雷号 同行，等高 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="输入号码"
+                android:inputType="phone"
+                android:background="@color/light_gray"
+                android:padding="12dp" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_report"
+                style="@style/ButtonRed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="上报雷号" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
